@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
-	nbt = require('../nbt');
+	nbt = require('../dist/nbt');
 
 var data = fs.readFileSync('../fixtures/bigtest.nbt.gz');
 nbt.parse(data, function(error, data) {

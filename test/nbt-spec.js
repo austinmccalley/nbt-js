@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
-    nbt = require('../nbt'),
+    nbt = require('../dist/nbt'),
     expect = require('chai').expect;
 
 describe('nbt.parse', function() {

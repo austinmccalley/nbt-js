@@ -1,6 +1,6 @@
 'use strict';
 
-var nbt = require('../nbt'),
+var nbt = require('../dist/nbt'),
     expect = require('chai').expect;
 
 describe('nbt.Reader', function() {

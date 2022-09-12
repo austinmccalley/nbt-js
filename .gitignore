@@ -3,3 +3,6 @@ node_modules/
 *.swp
 results.txt
 
+build
+dist
+pnpm-lock.yaml

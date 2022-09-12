@@ -1,13 +1,22 @@
 {
   "name": "nbt",
-  "version": "0.8.1",
+  "version": "1.0.0",
   "description": "A parser and serializer for NBT archives",
   "keywords": [
     "nbt",
     "minecraft"
   ],
   "homepage": "https://github.com/sjmulder/nbt-js",
-  "author": "Sijmen Mulder <ik@sjmulder.nl>",
+  "contributors": [
+    {
+      "email": "ik@sjmulder.nl",
+      "name": "Sijmen Mulder"
+    },
+    {
+      "name": "Austin M.",
+      "email": "austin@austinmccalley.com"
+    }
+  ],
   "license": "SEE LICENSE IN License.md",
   "main": "nbt",
   "repository": {
@@ -15,11 +24,26 @@
     "url": "https://github.com/sjmulder/nbt-js.git"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "jsdoc": "^3.4.3",
-    "mocha": "^5.2.0"
+    "@open-wc/building-rollup": "^2.0.2",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/node": "^18.7.16",
+    "chai": "^4.3.6",
+    "deepmerge": "^4.2.2",
+    "jsdoc": "^3.6.11",
+    "mocha": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.0"
   },
   "scripts": {
-    "test": "make check"
-  }
+    "test": "make check",
+    "build": "rimraf dist && tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "typescript": "^4.8.3",
+    "zlib": "^1.0.5"
+  },
 }
