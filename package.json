@@ -45,5 +45,5 @@
   "dependencies": {
     "typescript": "^4.8.3",
     "zlib": "^1.0.5"
-  },
+  }
 }
